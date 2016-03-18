@@ -4,6 +4,15 @@ layout: default
 
 <div class="row">
   <div class="col-md-8">
+    {% for post in site.posts %}
+      <article>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      </article>
+    {% endfor %}
+
     <article>
       <h3>11/12/13</h3>
       <h2><a href="#">On the Street in Brooklyn</a></h2>
